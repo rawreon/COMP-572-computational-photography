@@ -1,0 +1,6 @@
+function result = final_seam_rem(img)
+    energy = dual_gradient(img);
+    seamArray = find_V_seam(energy);
+    show_seam(img, seamArray);
+    result = remove_seam(img,seamArray);
+end
